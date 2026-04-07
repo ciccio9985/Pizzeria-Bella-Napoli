@@ -22,16 +22,7 @@ https://www.tooplate.com/view/2121-wave-cafe
             <i class="fas fa-coffee fa-3x tm-site-logo"></i>
             <h1 class="tm-site-name">Pizzeria bella Napoli</h1>
           </div>
-          <nav class="tm-site-nav">
-            <ul class="tm-site-nav-ul">
-              <li class="tm-page-nav-item">
-                <a href="#drink" class="tm-page-link active">
-                  <i class="fas fa-mug-hot tm-page-link-icon"></i>
-                  <span>Menu alla carta</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          
         </div>        
       </div>
       <div class="tm-right">
@@ -183,16 +174,8 @@ https://www.tooplate.com/view/2121-wave-cafe
     }    
 
     function initPage() {
-      let pageId = location.hash;
 
-      if(pageId) {
-        highlightMenu($(`.tm-page-link[href^="${pageId}"]`)); 
-        showPage($(pageId));
-      }
-      else {
-        pageId = $('.tm-page-link.active').attr('href');
-        showPage($(pageId));
-      }
+      showPage($('#drink'));
     }
 
     function highlightMenu(menuItem) {
